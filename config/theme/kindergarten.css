@@ -1,0 +1,133 @@
+/*
+ * Linux Australia's Kindergarten CSS definitions
+ * http://linux.org.au
+ */
+body.grey {
+       background: url("images/big-feet-grey.png") right repeat-y;
+       background-color: #c2c2c2;
+}
+
+body.white { 
+             background-color: white;
+ }
+
+p { text-align: justify; }
+
+h1 {
+    /*position: absolute;*/
+    top: 95px;
+    left: 175px;
+    color: black;
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+}
+h2 {
+    color: #cc3300;
+    font-weight: bold;
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+}
+h3 {
+    color: #cc3300;
+    font-style: italic;
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+
+}
+h4 {
+    color: #cc3300;
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+}
+
+#heading { 
+           height: 150px;
+           margin: 0;
+}
+
+#heading img { border: 0; 
+}
+
+#links {
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    text-align: right;
+    font-size: small;
+    color: #888888;
+    float: right;
+}
+
+#news {
+    font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    text-align: left;
+    font-size: small;
+    color: #000000;
+    float: left;
+}
+
+.news { padding-left:0.5em;}
+
+div.front_links { margin-top: -4em;
+                padding-left: 2em; 
+                padding-right: 2em;
+                float: right;
+                clear: right;
+                width: 45%;
+}
+
+div.front_links ul { 
+          list-style: none;
+          white-space: nowrap;
+ }
+
+.front_links img { border: 0 none; vertical-align: middle; }
+.right_links img { border: 0 none; vertical-align: middle; }
+
+#single_column {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+div.footer p{
+    font-family: "Bitstream Vera", Lucida, "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+    font-size: 9px;
+    color: #888888;
+    margin-bottom: 0cm;
+    padding-bottom: 0cm;
+    clear: both;
+}
+
+dl dt { font-weight: bold; }
+
+div.right_links {
+               margin-top: -9em;
+	       font-size: small;
+               text-align: right;
+               float: right;
+	       clear: right;
+	       padding-left: 1em;
+	       padding-right: 2em;
+	       font-weight: bold;
+}
+
+div.right_links ul { list-style: none; }
+
+div.right_links img { border: 0; }
+
+#left_column {
+    padding-left: 1.5em;
+    float: left;
+    width: 45%;
+}
+
+#left_column :first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#right_column {
+    margin-left: 50%;
+    padding-left: 2em;
+    padding-right: 1.5em;
+}
+
+#right_column :first-child {
+    padding-top: 0;
+    margin-top: 0;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+<head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <title><TMPL_VAR name></title>
+       <link rel="stylesheet" href="generic.css" type="text/css">
+       <link rel="stylesheet" href="layout.css" type="text/css">
+       <link rel="stylesheet" href="kindergarten.css" type="text/css">
+       <link rel="stylesheet" href="planet.css" type="text/css">
+
+</head>
+
+<body>
+
+<div id="links">
+<!--<a href="http://opensource.org.au">OpenSource.org.au</a> |-->
+<a href="http://linux.org.au">Linux Australia</a> |
+<a href="http://linux.org.au/membership">Membership</a> |
+<a href="http://linux.org.au/contact">Contact Us</a>
+</div> <!-- links -->
+<div id="news">
+<!--<b><i>News!</i></b> <a href="http://planet.linux.org.au/lca2008.html">Planet LCA2008</a> is up and running. Email <img src="images/plca2008-addr.png" alt="nada" hspace="3" vspace="3"> to be added...-->
+</div><!-- news -->
+<br/>
+<img src="images/ploa-logo2.png" align="center" alt="Planet Linux Australia">
+
+</td> </tr>
+<tr> <td>
+<br/>
+<i>Celebrating Australians &amp; Kiwis in the Linux and Free/Open-Source community...</i>
+</td> </tr>
+</table>
+<br/>
+
+<div id="body">
+
+<TMPL_LOOP Items>
+       <TMPL_IF new_date>
+               <h2 class="date"><TMPL_VAR new_date></h2>
+       </TMPL_IF>
+
+       <div class="entry">
+
+       <div class="person-info">
+               <a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">">
+                       <TMPL_IF channel_face>
+                               <img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br />
+                       <TMPL_ELSE>
+                               <img class="face" src="images/nobody.png" alt=""><br />
+                       </TMPL_IF>
+                       <TMPL_VAR channel_name>
+                       <TMPL_IF channel_nick>
+                       <br />
+                       (<TMPL_VAR channel_nick>)
+                       </TMPL_IF>
+               </a>
+       </div>
+
+               <div class="post">
+               <div class="post2">
+                       <div class="post-header">
+                               <TMPL_IF title>
+                               <h4 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
+                               <TMPL_ELSE>
+                               <div class="post-title"><span>&nbsp;</span></div>
+                               </TMPL_IF>
+                       </div>
+                       <div class="post-contents">
+                       <TMPL_VAR content>
+                       </div>
+                       <div class="post-footer">
+                               <p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a>
+                       </div>
+               </div>
+               </div>
+
+       </div>
+</TMPL_LOOP>
+</div>
+
+
+<div id="sidebar">
+<img src="images/logo.png" width="136" height="136" alt="">
+
+        <div class="section">
+<h3>Feeds</h3>
+<ul>
+<TMPL_LOOP Channels>
+<li>
+<a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+</li>
+</TMPL_LOOP>
+</ul>
+
+</div> <!-- section -->
+
+<p>
+        <div class="section">
+        <h3>Subscribe</h3>
+        <ul>
+                <li><a href="rss20.xml">RSS 2.0</a></li>
+                <li><a href="rss10.xml">RSS 1.0</a></li>
+                <li><a href="foafroll.xml">FOAF</a></li>
+                <li><a href="opml.xml">OPML</a></li>
+        </ul>
+        </div>
+<p>
+
+        <div class="section">
+<h3>Colophon</h3>
+
+Maintained by:<br/>
+<a href="mailto:planet@linux.org.au">Linux Australia's Planet team</a>
+<!--If you'd like your feed added, just ask the <i>Planet LA</i> team :-)-->
+<br/>
+<p>
+FAQ here:<br/>
+<a href="faq.html">Planet LA FAQ</a>
+
+<p>
+<strong>Last updated:</strong><br>
+<TMPL_VAR date><br>
+<em>All times are UTC.</em><br>
+<br>
+Powered by:<br>
+<a href="http://www.planetplanet.org/"><img src="images/planet.png" width="80" height="15" alt="Planet" border="0"></a>
+</p>
+</div> <!-- section -->
+
+</div>
+
+<div id="copyright">
+This web page is <a href="http://validator.w3.org/check/referer">optimised</a> for <a href="http://www.w3.org/">standards</a>.<br/>
+Copyright &copy; 2004, 2005, 2006, 2007 Linux Australia. All Rights Reserved.<br/>
+Blog entries aggregated on this page are owned by, and represent the opinion of
+the author.<br/>
+
+</div>
+
+</body>
+
+</html>
